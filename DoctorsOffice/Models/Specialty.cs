@@ -4,14 +4,9 @@ namespace DoctorsOffice.Models
 {
     public class Specialty
     {
-        public Specialty()
-        {
-            this.JoinEntities = new HashSet<DoctorSpecialty>();
-        }
-
         public int SpecialtyId { get; set; }
         public string Name { get; set; }
-
-        public virtual ICollection<DoctorSpecialty> JoinEntities { get;}
+        public int DoctorId { get; set; }
+        public virtual Doctor Doctor { get; set; }
     }
 }

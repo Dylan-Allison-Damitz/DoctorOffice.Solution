@@ -40,6 +40,11 @@ namespace DoctorsOffice.Controllers
         .Include(doctor => doctor.JoinEntities)
         .ThenInclude(join => join.Patient)
         .FirstOrDefault(doctor => doctor.DoctorId == id);
+    // var thisDoctor2 = _db.Doctors   
+    //     .Include(doctor => doctor.JoinEntities2)
+    //     .ThenInclude(join => join.Specialty)
+    //     .FirstOrDefault(doctor => doctor.DoctorId == id);
+        
     return View(thisDoctor);
     }
     
